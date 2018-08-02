@@ -18,17 +18,10 @@ function enter(key) {
 */
 function backspace() {
     var previousBall = scorecard.charAt(scorecard.length - 1);
-<<<<<<< HEAD
-    if(previousBall!="."){
-       score = score - previousBall; 
-       document.getElementById('score').innerHTML = score;
-    }
-    scorecard = scorecard.substring(0, scorecard.length-1);
-=======
     score = score - previousBall;
-    scorecard = scorecard.substring(0, scorecard.length);
->>>>>>> parent of bc137ee... Fixed backspace error
+    scorecard = scorecard.substring(0, scorecard.length-1);
     document.getElementById('scorecard').innerHTML = scorecard;
+    document.getElementById('score').innerHTML = score;
 }
 
 function reset() {
