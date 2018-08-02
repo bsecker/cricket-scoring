@@ -41,6 +41,16 @@
     assert.equal(getScore(), 0);
   });
 
+  QUnit.test("deleting a . doesn't result in NaN", function(assert){
+    enter('1');
+    assert.equal(getScore(),1);
+    assert.equal(getScorecard(), '1');
+    enter('.');
+    backspace();
+    assert.equal(getScore(),1);
+    assert.equal(getScorecard(), '1');
+  })
+
 
   function getScore() {
     return document.getElementById('score').innerHTML;
