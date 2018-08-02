@@ -51,6 +51,10 @@ public class BasicScoring  {
     }
     
     public Result enterScore(String entry) {
+        if(entry.equals("<-")){
+            eraseLastEntry();
+            return score;
+        }
         Result score = null;
         for (char c : entry.trim().toCharArray()) {
             score = enterScore(c);
